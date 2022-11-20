@@ -24,31 +24,21 @@ questions = [
 score = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
 
 def body(x):
-
     indivScore = input()
     if (indivScore == "Y"):
         score[x] = 1
-        # print("your score has been added")
     elif (indivScore == "y"):
         score[x] = 1
-        # print("your score has been added")
-    # else:
-        # print("0 points")
 
 print("Please enter your response as Y or N and press enter")   
-time.sleep(1)
+time.sleep(3)
 for x in range(17):
     print( str(x + 1) + " " + str(questions[x-1]))
     body(x)
 
-# print(score)
 sum = 0
 for i in range(0, len(score)):    
    sum = sum + score[i];    
-     
-# print("Sum of all the elements of an array: " + str(sum));    
-finalScore = math.ceil(( sum/len(questions) )*100)
 
-# print(finalScore)
-
+finalScore = math.ceil((sum/len(questions))*100)
 print("Your program scored " +  str(finalScore) + " out of 100.")
